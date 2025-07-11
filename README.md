@@ -1,15 +1,33 @@
-# Stock Price Prediction Project
 
-This project predicts the next-day closing price of Apple (AAPL) stock using machine learning models on AWS SageMaker.
+## How to Run
 
-## Features
-- Data collection using Twelve Data API
-- Feature engineering for financial time series
-- Model training (Random Forest & Linear Regression)
-- Deployment on AWS SageMaker for real-time inference
+1. **Collect Data:**  
+   Use the provided script/notebook to fetch AAPL data from the Twelve Data API.
 
-## Source code
+2. **Preprocess & Feature Engineering:**  
+   Clean and prepare the data, generate features.
+
+3. **Model Training:**  
+   Train the models using scikit-learn (see `src/`).
+
+4. **Deployment:**  
+   Deploy the selected model to AWS SageMaker using the scripts in `deployment/`.
+
+## Results
+
+- Random Forest achieved lower RMSE and better R² than Linear Regression.
+- Real-world test with AAPL data (July 7, 2025): Model predicted the next-day closing price within $0.33 accuracy.
+- Full pipeline from data collection to cloud deployment.
+
+## Live Demo / Code
+
+The complete source code and project files are available here:  
 [GitHub Repository](https://github.com/nasserpeiroti/Stock-Price-Prediction)
 
 ## Author
-Nasser Peiroti
+
+Nasser Peiroti  
+
+## License
+
+This project is for educational purposes.
